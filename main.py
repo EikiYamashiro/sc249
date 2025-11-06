@@ -96,12 +96,11 @@ def main():
                 cls_ids = r.boxes.cls.tolist()
 
             for b, c, cl in zip(xyxy, confs, cls_ids):
-                if cl == 0:
-                    # apply confidence threshold (already applied by model, but safe)
-                    if float(c) >= CONFIDENCE_THRESHOLD:
-                        boxes.append(b)
-                        confidences.append(float(c))
-                        classes.append(int(cl))
+                # apply confidence threshold (already applied by model, but safe)
+                if float(c) >= CONFIDENCE_THRESHOLD:
+                    boxes.append(b)
+                    confidences.append(float(c))
+                    classes.append(int(cl))
 
         # Draw detections
         draw_boxes(frame, boxes, confidences, classes, names)
