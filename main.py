@@ -1,17 +1,3 @@
-"""
-yolo_webcam.py
-Real-time webcam demo using Ultralytics YOLO (e.g. YOLOv8).
-Author: (you)
-Requirements: ultralytics, opencv-python
-
-Usage:
-    python yolo_webcam.py
-Optional args (edit in code or extend with argparse):
-    MODEL = "yolov8n.pt"  # lightweight model
-    CONFIDENCE_THRESHOLD = 0.25
-    WEBCAM_ID = 0
-"""
-
 import time
 import cv2
 from ultralytics import YOLO
